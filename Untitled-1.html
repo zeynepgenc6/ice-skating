@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hobby</title>
+    <style>
+      body {
+        background-image: linear-gradient(to top, #93deff 0%, #ffcbcb 100%);
+        text-align: center;
+        display: block;
+      }
+      button {
+        margin: 15px auto;
+        padding: 15px;
+        border-radius: 25px;
+        color: white;
+        background: #1c1824;
+        border: 1px solid #1c1824;
+        font-size: 18px;
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      button:hover {
+        background: pink;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 500px;
+        margin: 20px auto;
+        background: #edfffa;
+        padding: 40px;
+        border-radius: 16px;
+        color: #020438;
+      }
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: left;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      a {
+        color: #2eb872;
+      }
+      footer {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 15px;
+      }
+
+      .theme-button {
+        background: #1c1824;
+        font-size: 25px;
+        color: white;
+        padding: 5 8px;
+      }
+      .theme-button:hover {
+        color: #d3cde0;
+        background: #885df1;
+      }
+      .skates-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .skates-intro-picture:hover {
+        filter: contrast(100%);
+        transform: scale(1.5);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .apply {
+        color: #d3cde0;
+        background: #885df1;
+      }
+      .apply:hover {
+        color: #885df1;
+        background: white;
+        border: 1px solid #885df1;
+      }
+      .read:hover {
+        text-decoration: none;
+      }
+      .name:hover {
+        text-decoration: none;
+      }
+      .dark {
+        background-image: linear-gradient(to top, #c22828 0%, #b7c6f8d5 100%);
+        color: black;
+      }
+      .dark .container {
+        background: #fff4e1;
+        color: black;
+      }
+      .dark a {
+        color: #ffaa64;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <button class="change-theme-button">CHANGE THEME</button>
+    <div class="container">
+      <h1>⛸️What is ice skating?</h1>
+      <h2>My favorite type of skate</h2>
+      <a href="https://en.wikipedia.org/wiki/Ice_skating" target="_blank">
+        <img
+          src="https://i.pinimg.com/564x/ff/b1/4f/ffb14f40250c91e6db8a6f17d6a31116.jpg"
+          alt="skates-intro-picture"
+          class="skates-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://i.pinimg.com/564x/d3/14/ac/d314ac6359a56e1fde944e45881cd7ef.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/564x/01/7f/39/017f39ed711f0fb3092f336965126063.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/564x/57/66/7a/57667adbbbf349a76a785480ab479c74.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/564x/57/ed/e1/57ede1d2684f2f4544d7b2b414be06de.jpg"
+          alt=""
+        />
+      </div>
+      <p>
+        Ice skating is the self-propulsion and gliding of a person across an ice
+        surface, using metal-bladed ice skates. People skate for various
+        reasons, including recreation, exercise, competitive sports, and
+        commuting.
+        <br />
+        <br />
+        📖
+        <a
+          href="https://en.wikipedia.org/wiki/Ice_skating"
+          target="_blank"
+          class="read"
+          ><strong>Read on Wikipedia</strong></a
+        >
+      </p>
+      <br />
+      <button class="apply-button">GET IN TOUCH FOR A PRIVATE CLASS</button>
+      <footer>
+        Coded by👩‍💻
+        <a
+          href="https://www.instagram.com/gzeynog/"
+          target="_blank"
+          class="name"
+          >Zeynep Genc</a
+        >
+        with HTML, CSS and JavaScript
+      </footer>
+    </div>
+    <script>
+      function order() {
+        let quanty = prompt("Have you ice skated before?");
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your email?");
+
+        alert(
+          "Thanks " +
+            name +
+            "! We'll be in touch soon with more details. Feel free to contact us if you have any questions zeynepgenc6@gmail.com"
+        );
+      }
+
+      let button = document.querySelector(".apply-button");
+      button.addEventListener("click", order);
+
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".change-theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
